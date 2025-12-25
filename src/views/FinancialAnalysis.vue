@@ -148,6 +148,17 @@
                 <span class="result-label">执行时间:</span>
                 <span class="result-value">{{ formatExecutionTime(twrTime) }}</span>
               </div>
+              <div v-if="twrResult.daily_cumulative_returns && twrResult.daily_cumulative_returns.length > 0">
+                <el-divider>每日累计收益率</el-divider>
+                <el-table :data="twrResult.daily_cumulative_returns" border>
+                  <el-table-column label="日期" prop="date" width="180" />
+                  <el-table-column label="累计收益率">
+                    <template #default="{ row }">
+                      {{ formatPercentage(row.cumulative_return) }}
+                    </template>
+                  </el-table-column>
+                </el-table>
+              </div>
             </div>
           </el-card>
         </el-tab-pane>
