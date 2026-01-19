@@ -105,8 +105,8 @@ compute-engine-frontend/
 ## 开发指南
 
 ### 环境要求
-- Node.js >= 16.x
-- npm >= 8.x
+- Node.js >= 20.18.0
+- npm >= 10.8.2
 
 ### 安装依赖
 ```bash
